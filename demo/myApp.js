@@ -87,10 +87,28 @@ angular.module('myApp', [
       .then(function(stuff) {
         storage
           .create(key, {
-            text: 'stuff and things...' + Date.now()
+            text: 'stuff and things...' + Date.now(),
+            id: Date.now()
           })
       });
 
   }
 ])
+.run([
+  'crud',
+  function(crud) {
+    var stuff = crud
+                  .setStore('session')
+                  .setKey('promise-for-storage:crud')
+    stuff
+      .all()
+      .then(function(items) {
+        stuff
+          .create({
+            text: 'shizzle...',
+            id: Date.now()
+          });
+      });
+  }
+]);
 
