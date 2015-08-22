@@ -1,0 +1,24 @@
+{
+  "name": "angular-promise-for-storage",
+  "version": "0.0.1",
+  "description": "Promise driven wrappers around browser based storage mechanisms",
+  "homepage": "https://github.com/benjaminapetersen/angular-promise-for-storage",
+  "authors": [
+    "benjaminapetersen <admin@benjaminapetersen.me>"
+  ],
+  "main": "./dist/promise-for-storage.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.4"
+  },
+  "dependencies": {
+    "lodash": "~3.10.1"
+  }
+}
